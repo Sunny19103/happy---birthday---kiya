@@ -1,181 +1,267 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Happy Birthday Kiyaa</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Halaman 1 -->
-    <div class="page page-1 active" id="page1">
-        <div class="paper-card">
-            <div class="tape tape-1"></div>
-            <div class="tape tape-2"></div>
-            <div class="tape tape-3"></div>
-            <div class="tape tape-4"></div>
-            
-            <h1 class="paper-title">HappyBirthdayKiya:3</h1>
-            
-            <div class="photo-frame">
-                <div class="photo-polaroid">
-                    <img src="kiya1.jpeg" alt="Birthday">
-                    <div class="polaroid-tape"></div>
-                </div>
-            </div>
-            
-            <div class="hint-text">
-                <p class="hint-message">klik next untuk lanjut </p>
-            </div>
-            
-            <button class="paper-btn next-btn" id="next1">NEXT</button>
-        </div>
-    </div>
 
-    <!-- Halaman 2 - Our Special Moments -->
-    <div class="page page-2" id="page2">
-        <div class="paper-card">
-            <div class="tape tape-1"></div>
-            <div class="tape tape-2"></div>
-            <div class="tape tape-3"></div>
-            <div class="tape tape-4"></div>
-            
-            <h2 class="section-title">Foto Foto Kamu Nich</h2>
-            
-            <div class="memories-grid">
-                <div class="memory-card">
-                    <div class="photo-small">
-                        <img src="kiya2.jpeg" alt="Moment 1">
+    <!-- HALAMAN WELCOME -->
+    <div id="welcomeScreen">
+        <div class="welcome-container">
+            <div class="paper-card welcome-paper">
+                <div class="tape tape-1"></div>
+                <div class="tape tape-2"></div>
+                <div class="tape tape-3"></div>
+                <div class="tape tape-4"></div>
+
+                <div class="welcome-video">
+                    <video autoplay loop muted playsinline class="welcome-vid">
+                        <source src="hellow.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="welcome-text">
+                    <p>Halo, apa kabar?</p>
+                    <p>Semoga baik yaa</p>
+                    <p>Aku ada kejutan nich</p>
+                </div>
+
+                <button id="startButton">MULAI</button>
+
+                <div class="countdown-container" id="countdownBox">
+                    <p class="countdown-label">Menuju Harimu</p>
+                    <div class="countdown" id="countdown">
+                        <span id="days">00</span> hari
+                        <span id="hours">00</span> jam
+                        <span id="minutes">00</span> menit
+                        <span id="seconds">00</span> detik
                     </div>
                 </div>
-                
-                <div class="memory-card">
-                    <div class="photo-small">
-                        <img src="kiya3.jpeg" alt="Moment 2">
-                    </div>
-                </div>
-                
-                <div class="memory-card">
-                    <div class="photo-small">
-                        <img src="kiya4.jpeg" alt="Moment 3">
-                    </div>
-                </div>
-                
-                <div class="memory-card">
-                    <div class="photo-small">
-                        <img src="kiya5.jpeg" alt="Moment 4">
-                    </div>
-                </div>
-            </div>
-            
-            <div class="hint-text">
-                <p class="hint-message">tekan next untuk kejutan </p>
-            </div>
-            
-            <div class="button-group">
-                <button class="paper-btn back-btn" id="back2">BACK</button>
-                <button class="paper-btn next-btn" id="next2">NEXT</button>
             </div>
         </div>
     </div>
 
-    <!-- Halaman 3 - Dengan Lagu -->
-    <div class="page page-3" id="page3">
-        <div class="paper-card">
-            <div class="tape tape-1"></div>
-            <div class="tape tape-2"></div>
-            <div class="tape tape-3"></div>
-            <div class="tape tape-4"></div>
-            
-            <h2 class="section-title">For You, Kiyaa!!</h2>
-            
-            <div class="music-player">
-                <div class="music-icon">🎵 🎶 🎵</div>
-                <p class="music-title">Special Song for You</p>
-                
-                <audio id="birthdaySong" controls loop>
-                    <source src="lagukiya.mp4" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-                
-                <div class="music-buttons">
-                    <button class="music-control" id="playBtn">▶ Play</button>
-                    <button class="music-control" id="pauseBtn">⏸ Pause</button>
+    <!-- MAIN CONTENT -->
+    <div id="mainContent" style="display: none;">
+
+        <!-- Halaman 1 -->
+        <div class="page page-1 active" id="page1">
+            <div class="paper-card">
+                <div class="tape tape-1"></div>
+                <div class="tape tape-2"></div>
+                <div class="tape tape-3"></div>
+                <div class="tape tape-4"></div>
+
+                <h1 class="paper-title">Happy Birthday Kiya</h1>
+
+                <div class="photo-frame">
+                    <div class="photo-polaroid">
+                        <img src="kiya1.jpeg" alt="Birthday">
+                        <div class="polaroid-tape"></div>
+                    </div>
                 </div>
-                
-                <p class="music-note">Beautiful Kek You </p>
-            </div>
-            
-            <div class="hint-text">
-                <p class="hint-message">klik next untuk pesan rahasia </p>
-            </div>
-            
-            <div class="button-group">
-                <button class="paper-btn back-btn" id="back3">BACK</button>
-                <button class="paper-btn next-btn" id="next3">NEXT</button>
+
+                <div class="hint-text">
+                    <p class="hint-message">klik next untuk lanjut</p>
+                </div>
+
+                <button class="paper-btn next-btn" id="next1">NEXT</button>
             </div>
         </div>
-    </div>
 
-    <!-- Halaman 4 - Pesan Sederhana dengan Foto -->
-    <div class="page page-4" id="page4">
-        <div class="paper-card small-card">
-            <div class="tape tape-1"></div>
-            <div class="tape tape-2"></div>
-            <div class="tape tape-3"></div>
-            <div class="tape tape-4"></div>
-            
-            <div class="write-message">
-                <p class="write-text">I write something for you</p>
-            </div>
-            
-            <div class="cute-image">
-                <img src="cing1.jpeg" alt="Cute Image" class="cute-photo">
-            </div>
-            
-            <div class="button-group" style="margin-top: 25px;">
-                <button class="paper-btn back-btn" id="back4">BACK</button>
-                <button class="paper-btn next-btn" id="next4">NEXT</button>
-            </div>
-        </div>
-    </div>
+        <!-- Halaman 2 - Foto Foto -->
+        <div class="page page-2" id="page2">
+            <div class="paper-card">
+                <div class="tape tape-1"></div>
+                <div class="tape tape-2"></div>
+                <div class="tape tape-3"></div>
+                <div class="tape tape-4"></div>
 
-    <!-- Halaman 5 - Kertas untuk Kata-kata -->
-    <div class="page page-5" id="page5">
-        <div class="paper-card letter-card">
-            <div class="tape tape-1"></div>
-            <div class="tape tape-2"></div>
-            <div class="tape tape-3"></div>
-            <div class="tape tape-4"></div>
-            
-            <div class="letter-header">
-                <span class="letter-date">Untuk Kiyaa,</span>
-            </div>
-            
-            <div class="letter-paper" id="letterPaper">
-                <div class="handwrite">
-                    <p>🎉🎉🎉🎉</p>
-                    <p>Selamat ulang tahun Kiyaa</p>
-                    <p>Semoga panjang umur, sehat selalu yaa</p>
-                    <p>dan bahagia terus yoo.</p>
-                    <br>
-                    <p>Kamu itu orang yang baik,</p>
-                    <p>jangan pernah berubah.</p>
-                    <br>
-                    <p>Makasih sudah menjadi dirimu.</p>
-                    <p>Aku senang bisa kenal kamu.</p>
-                    <br>
-                    <br>
-                    <p class="signature">- Dari ARUL Ganteng -</p>
+                <h2 class="section-title">Foto Foto Kamu</h2>
+
+                <div class="memories-grid">
+                    <div class="memory-card">
+                        <div class="photo-small">
+                            <img src="kiya2.jpeg" alt="Moment 1">
+                        </div>
+                    </div>
+                    <div class="memory-card">
+                        <div class="photo-small">
+                            <img src="kiya3.jpeg" alt="Moment 2">
+                        </div>
+                    </div>
+                    <div class="memory-card">
+                        <div class="photo-small">
+                            <img src="kiya4.jpeg" alt="Moment 3">
+                        </div>
+                    </div>
+                    <div class="memory-card">
+                        <div class="photo-small">
+                            <img src="kiya5.jpeg" alt="Moment 4">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hint-text">
+                    <p class="hint-message">tekan next untuk kejutan</p>
+                </div>
+
+                <div class="button-group">
+                    <button class="paper-btn back-btn" id="back2">BACK</button>
+                    <button class="paper-btn next-btn" id="next2">NEXT</button>
                 </div>
             </div>
-            
-            <div class="button-group">
-                <button class="paper-btn back-btn" id="back5">BACK</button>
+        </div>
+
+        <!-- Halaman 3 - Musik -->
+        <div class="page page-3" id="page3">
+            <div class="paper-card music-big-card">
+                <div class="tape tape-1"></div>
+                <div class="tape tape-2"></div>
+                <div class="tape tape-3"></div>
+                <div class="tape tape-4"></div>
+
+                <h2 class="section-title big-title">For You, Kiyaa</h2>
+
+                <div class="music-player-big">
+                    <div class="music-icon-big">🎵 🎶 🎵</div>
+                    <p class="music-title-big">Special Song for You</p>
+
+                    <audio id="birthdaySong" controls loop>
+                        <source src="lagukiya.mp4" type="audio/mpeg">
+                        Your browser does not support audio.
+                    </audio>
+
+                    <div class="music-buttons-big">
+                        <button class="music-control-big" id="playBtn">PLAY</button>
+                        <button class="music-control-big" id="pauseBtn">PAUSE</button>
+                    </div>
+
+                    <p class="music-note-big">A little gift for you</p>
+                </div>
+
+                <div class="hint-text">
+                    <p class="hint-message">klik next untuk pesan rahasia</p>
+                </div>
+
+                <div class="button-group">
+                    <button class="paper-btn back-btn" id="back3">BACK</button>
+                    <button class="paper-btn next-btn" id="next3">NEXT</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Halaman 4 -->
+        <div class="page page-4" id="page4">
+            <div class="paper-card small-card">
+                <div class="tape tape-1"></div>
+                <div class="tape tape-2"></div>
+                <div class="tape tape-3"></div>
+                <div class="tape tape-4"></div>
+
+                <div class="write-message">
+                    <p class="write-text">I write something for you</p>
+                </div>
+
+                <div class="cute-image">
+                    <img src="cing1.jpeg" alt="Cute Image" class="cute-photo">
+                </div>
+
+                <div class="button-group" style="margin-top: 25px;">
+                    <button class="paper-btn back-btn" id="back4">BACK</button>
+                    <button class="paper-btn next-btn" id="next4">NEXT</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Halaman 5 - Surat -->
+        <div class="page page-5" id="page5">
+            <div class="paper-card letter-card">
+                <div class="tape tape-1"></div>
+                <div class="tape tape-2"></div>
+                <div class="tape tape-3"></div>
+                <div class="tape tape-4"></div>
+
+                <div class="letter-header">
+                    <span class="letter-date">Untuk Kiyaa</span>
+                </div>
+
+                <div class="letter-paper">
+                    <div class="handwrite">
+                        <p>Selamat ulang tahun ya Kiyaa!</p>
+                        <br>
+                        <p>Hari ini bukan cuma tentang bertambahnya usia, tapi tentang bertambahnya cerita, pengalaman,
+                            pelajaran, dan kenangan yang sudah kamu lewati. Setiap tahun yang kamu jalani, membentukmu
+                            jadi pribadi yang lebih kuat, lebih bijak, dan lebih dewasa. Dan itu adalah hal yang patut
+                            di rayakan.</p>
+                        <br>
+                        <p>Semoga di usia yang baru ini, semua doa baik yang kamu simpan diam-diam satu per satu
+                            menemukan jalannya. Semoga langkahmu selalu dipenuhi keberanian, hatimu dipenuhi ketenangan,
+                            dan hidupmu dipenuhi kebahagiaan yang tulus. Kalau tahun kemarin ada luka, semoga tahun ini
+                            jadi musim penyembuhan. Kalau kemarin ada kegagalan, semoga sekarang jadi awal keberhasilan
+                            yang lebih besar.</p>
+                        <br>
+                        <p>Makasih sudah menjadi dirimu.</p>
+                        <p>Aku senang bisa kenal kamu.</p>
+                        <br>
+                        <p class="signature">- Dari ARUL Ganteng -</p>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button class="paper-btn back-btn" id="back5">BACK</button>
+                    <button class="paper-btn next-btn" id="next5">NEXT</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Halaman 6 - Pesan Tersembunyi -->
+        <div class="page page-6" id="page6">
+            <div class="paper-card secret-card">
+                <div class="tape tape-1"></div>
+                <div class="tape tape-2"></div>
+                <div class="tape tape-3"></div>
+                <div class="tape tape-4"></div>
+
+                <div class="secret-locked" id="secretLocked">
+                    <p class="secret-title">Pesan Tersembunyi</p>
+                    <p class="secret-hint">Masukkan kata sandi untuk membuka</p>
+
+                    <div class="secret-clue">
+                        <p class="clue-text">Tanggal ulang tahun Kiyaa😁 (4 digit)</p>
+                    </div>
+
+                    <div class="password-input-group">
+                        <input type="password" id="passwordInput" class="password-input" placeholder="Kata sandi"
+                            maxlength="4" inputmode="numeric">
+                        <button id="submitPassword" class="password-btn">Buka</button>
+                    </div>
+                    <p class="password-error" id="passwordError"></p>
+                </div>
+
+                <div class="secret-unlocked" id="secretUnlocked" style="display: none;">
+                    <p class="secret-title">Prank</p>
+                    <div class="secret-message-hidden">
+                        <p>Nda ada pesan rahasia</p>
+                        <p>wkwkwkwk</p>
+                        <br>
+                        <p>😝</p>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button class="paper-btn back-btn" id="back6">BACK</button>
+                </div>
             </div>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
